@@ -158,3 +158,18 @@ function displayQuiz() {
         optionsContainer.appendChild(button);  
     });
 }
+
+function checkAnswer(selectedOption) {
+    const correctAnswer = quizzes[currentQuestionIndex].answer;
+    if (selectedOption === correctAnswer) {
+        score += 5;
+    } else {
+        timeLeft -= 10;
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizzes.length) {
+        displayQuiz();
+    } else {
+        endQuiz();
+    }
+}
