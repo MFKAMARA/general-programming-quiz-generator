@@ -1,0 +1,95 @@
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    
+    padding: 0;
+    background-color: #e7d8d8;
+}
+
+button {
+    margin: 0.5rem;
+    min-width: 4rem;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.head {
+    text-align: center;
+    padding: 10px;
+    margin: 2rem;
+    font-size: 30px;
+}
+.start {
+    padding: 0.5rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem; 
+    text-align: center;   
+}
+#quiz-container {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid black;
+
+}
+#quiz-box {
+    margin: 1 auto;
+    width: 70%;
+    padding: 0.5rem;
+
+}
+#options-container {
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content:space-around;
+    margin: 0.5rem auto;
+}
+#timer {
+    text-align: left;
+    font-size: 30px;
+    margin: 0.5rem 1rem;
+    font-weight: bold;
+}
+#time {
+    font-size: 30px;
+    margin: 0.5rem;
+    font-weight: bold;
+
+}
+#end-quiz {
+    width: 50%;
+    margin: 2rem auto; 
+}
+#score {
+    color: #0ba044;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0 0.5rem;
+
+}
+label {
+    display: block;
+    margin: 0.5rem;
+    width: 25%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 25%;
+    margin: 0.5rem;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+
+}
