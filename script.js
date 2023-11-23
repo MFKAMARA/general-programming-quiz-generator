@@ -173,3 +173,15 @@ function checkAnswer(selectedOption) {
         endQuiz();
     }
 }
+
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+        document.getElementById("time").textContent = timeLeft;
+        if (timeLeft <= 0) {
+            endQuiz();
+        }
+        timeLeft--;
+    }, 1000);
+}
+
