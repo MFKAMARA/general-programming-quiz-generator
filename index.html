@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Assets/style.css">
     <title>Document</title>
+
 </head>
 <body>
     <header>
-        <div class="start">
-            <h1>Quiz</h1>
+        <div class="head">
+            <h1>
+                Programming Quiz
+            </h1>
+        </div>
+        <div id="start-quiz" class="start">
+            <h2>Quiz</h2>
             <p>Take a programming quiz</p>
-            <button onclick="startQuiz">
+            <button onclick="startQuiz()">
                 Start Quiz
             </button>
         </div>
-        <div id="end-quiz" style="display: none;">
-            <h1>Score <span id="score">0</span></h1>
-            <button onclick="saveScore()">
-                Save My Score
-            </button>
-        </div>
     </header>
-    <div class="quiz-container">
-        <div id="quiz-container"></div>
+    <div id="quiz-container" style="display: none;">
+        <div id="quiz-box"></div>
         <div id="options-container"></div>
         <div id="timer">Time: <span id="time">45</span>sec</div>
+    </div>
+
+    <div id="end-quiz" style="display: none;">
+        <h1>Score <span id="score">0</span></h1>
+        <label for="initials">Enter your initials</label>
+        <input type="text" id="initials">
+        <button onclick="saveScore()">
+            Save My Score
+        </button>
     </div>
     <script src="script.js">
     </script>
