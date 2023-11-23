@@ -185,3 +185,9 @@ function startTimer() {
     }, 1000);
 }
 
+function endQuiz() {
+    clearInterval(timerInterval);
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("end-quiz").style.display = "block";
+    document.getElementById("score").textContent = score;
+}
