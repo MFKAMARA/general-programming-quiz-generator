@@ -144,3 +144,17 @@ function startQuiz() {
     startTimer();
 
 }
+
+function displayQuiz() {
+    const quizBox = document.getElementById("quiz-box");
+    const optionsContainer = document.getElementById("options-container");
+    quizBox.textContent = quizzes[currentQuestionIndex].question;
+    optionsContainer.innerHTML = "";
+
+    quizzes[currentQuestionIndex].options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => checkAnswer(option);
+        optionsContainer.appendChild(button);  
+    });
+}
