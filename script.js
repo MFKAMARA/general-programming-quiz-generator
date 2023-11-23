@@ -191,3 +191,11 @@ function endQuiz() {
     document.getElementById("end-quiz").style.display = "block";
     document.getElementById("score").textContent = score;
 }
+
+function saveScore() {
+    const initials = document.getElementById("initials").value;
+    console.log("initials: ", initials);
+    console.log("score: ", score);
+    resetQuiz();
+}
+
