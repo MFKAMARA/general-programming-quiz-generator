@@ -135,3 +135,12 @@ let currentQuestionIndex = 0;
 let score = 0;
 let timeLeft = 60;
 let timerInterval;
+
+
+function startQuiz() {
+    document.getElementById("start-quiz").style.display = "none";
+    document.getElementById("quiz-container").style.display = "block";
+    displayQuiz();
+    startTimer();
+
+}
