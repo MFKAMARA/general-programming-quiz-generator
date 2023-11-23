@@ -199,3 +199,11 @@ function saveScore() {
     resetQuiz();
 }
 
+function resetQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    timeLeft = 60;
+    document.getElementById("start-quiz").style.display = "block";
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("end-quiz").style.display = "none";
+}
