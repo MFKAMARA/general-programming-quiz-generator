@@ -194,8 +194,9 @@ function endQuiz() {
 
 function saveScore() {
     const initials = document.getElementById("initials").value;
-    console.log("initials: ", initials);
-    console.log("score: ", score);
+    const savedScores = JSON.parse (localStorage.getItem("quizScores")) || [];
+    savedScores.push({initials, score});
+    localStorage.setItem("quizScores", JSON.stringify(savedScores));
     resetQuiz();
 }
 
@@ -206,4 +207,16 @@ function resetQuiz() {
     document.getElementById("start-quiz").style.display = "block";
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("end-quiz").style.display = "none";
+}
+
+function displayScores() {
+    const savedScores = JSON.parse (localStorage.getItem("quizScores")) || [];
+    const scoresList = document.getElementById("scores-list");
+    scoresList.innerHTML = "";
+    savedScores.forEach((savedScore, index) => {
+        const li = document.createElement("li");
+        li.textContent = score.initials + ": " + score.score;
+        scoresContainer.appendChild(li);
+    });
+
 }
